@@ -15,7 +15,10 @@ if _new_relic_ini:
     except Exception as e:
         raise(Exception('Failed to init new relic agent %s' % e))
 
+from .extensions import factory
 from .run import app
+
+factory.boot()
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.

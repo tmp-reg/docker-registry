@@ -67,6 +67,11 @@ common: &common
         vary_header: _env:CORS_VARY_HEADER
         resources: _env:CORS_RESOURCES
 
+    # Extensions may add extra configuration as below
+    # extensions:
+    #     foo:
+    #         setting: _env:EXTENSION_FOO_SETTING
+
 local: &local
     <<: *common
     storage: local

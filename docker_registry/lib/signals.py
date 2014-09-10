@@ -3,7 +3,7 @@
 import blinker
 
 
-_signals = blinker.Namespace()
+namespace = _signals = blinker.Namespace()
 
 # Triggered when a repository is modified (registry/index.py)
 repository_created = _signals.signal('repository-created')
